@@ -1,7 +1,15 @@
 *{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+}
+a{
     text-decoration: none;
-    color: aliceblue;
+}
+li{
+    list-style: none;
+}
+h1{
+    font-size: 20pt;
 }
 body{
     margin: 0;
@@ -184,6 +192,29 @@ body{
         padding: 3px;
         text-decoration: underline;
     }
+    .volta_topo{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: fixed;
+        z-index: 1;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.487);
+        right: 0;
+        margin: 20px;
+        margin-top: 500px;
+        transition: 0.5s;
+    }
+    .volta_topo:hover{
+        transform: scale(1.2);
+        transition: 0.5s;
+    }
+    .volta_topo img{
+        width: 30px;
+        height: 30px;
+    }
     main,footer{
         margin-top: 10px;
     }
@@ -192,14 +223,20 @@ body{
         padding: 20px;
         flex-grow: 1;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         width: 100%-20px;
         background-color: #54B4BD;
+    }
+    main p, h1{
+        color: black;
+
     }
     section{
         display: flex;
         flex-wrap: wrap;
+        max-width: 600px;
     }
+
     footer{
         height: 200px;
         padding: 20px;
@@ -208,8 +245,6 @@ body{
     }
     footer>.detalhes{
         position: absolute;
-        height: 200px;
-        width: 200px;
         background-color: #23E8FA;
         display: flex;
         justify-content: center;
@@ -220,44 +255,44 @@ body{
     .detalhes, .detalhes div{
         border-radius: 50%;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.466);
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .detalhes #d1{
-        width: 180px;
-        height: 180px;
         background-color: #54B4BD;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .detalhes #d2{
-        width: 160px;
-        height: 160px;
         background-color: #77f4ff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .detalhes #d3{
-        width: 140px;
-        height: 140px;
         background-color: #54B4BD;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .detalhes #d4{
-        width: 120px;
-        height: 120px;
         background-color: #55f1ff;
+    }
+    #d4 img{
+        width: 90px;
+        height: 90px;
+        background-color: #54B4BD;
+        border-radius: 50%;
+    }
+    footer .direitos{
+        width: 200px;
+        height: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: rgba(54, 54, 54, 0.353);
+        padding: 10px;
+        border-radius: 15px;
+        border: 2px ridge rgba(25, 25, 112, 0.435);
+        box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.378);
     }
-    #d4 img{
-        width: 80px;
-        height: 80px;
-        background-color: #54B4BD;
-        border-radius: 20%;
+    .direitos p{
+        font-size: 17pt;
+        text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.464);
     }
     footer #redes{
         display: flex;
@@ -275,7 +310,7 @@ body{
     #redes div{
         margin: 5px;
         height: 35px;
-        width: 120px;
+        width: 140px;
         padding: 5px;
         display: flex;
         align-items: center;
@@ -290,7 +325,7 @@ body{
         border-radius: 10px;
     }
     #redes a{
-        display: flex;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
     }
